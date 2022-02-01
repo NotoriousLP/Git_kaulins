@@ -11,8 +11,11 @@ public class Kaulins {
 	}
 	public static void main(String[] args) {
 		Scanner dati = new Scanner(System.in);
+		int reizes;
+		do{
 		System.out.println("Cik reizes mest kauliņu");
-		int reizes = dati.nextInt();
+		reizes = dati.nextInt();
+		}while(reizes<1);
 		mestKaulinu(reizes);
 		dati.close();
 	}
