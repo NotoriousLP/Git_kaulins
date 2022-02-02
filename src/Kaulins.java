@@ -4,10 +4,15 @@ import java.util.Scanner;
 public class Kaulins {
 	static void mestKaulinu(int reizes){
 		Random rand = new Random();
+		int lielakais = 0, skaitlis;
 		for(int i=1; i<=reizes; i++){
-		int skaitlis = rand.nextInt(6)+1;
+		 skaitlis = rand.nextInt(6)+1;
 		System.out.println("Uzskrita "+skaitlis);
+		if(lielakais<skaitlis){
+			lielakais = skaitlis;
+			}
 		}
+		System.out.println("Lielakais skaitlis ir "+lielakais);
 	}
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
