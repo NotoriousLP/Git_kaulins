@@ -11,4 +11,4 @@ Java projekts, kurš realizē metamā kauliņa mešanu.
 - [x] Papildinātais GitHub krātuves saturs iegūts lokālai lietošanai
 - [ ] Projektam pieslēdzies vēl viens programmētājs un izmēģina kopdarbošanās (forking un clone)
 - [x] Projektā izveidots jauns zars (branch)
-- [ ] Sapludināti zari un novērsts merge konflikts
+- [x] Sapludināti zari un novērsts merge konflikts
