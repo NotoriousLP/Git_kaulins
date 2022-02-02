@@ -4,17 +4,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Kaulins {
-	static int mestKaulinu(int reizes){
+	static int mestKaulinu(){
 		Random rand = new Random();
-		int lielakais = 0, skaitlis=0;
-		for(int i=1; i<=reizes; i++){
-		 skaitlis = rand.nextInt(6)+1;
-		System.out.println("Uzskrita "+skaitlis);
-		if(lielakais<skaitlis){
-			lielakais = skaitlis;
-			}
-		}
-		System.out.println("Lielakais skaitlis ir "+lielakais);
+		 int skaitlis = rand.nextInt(6)+1;
 		return skaitlis;
 	}
 	public static void main(String[] args) {
@@ -31,12 +23,15 @@ public class Kaulins {
 				System.out.println("Cik reizes mest kauliņu");
 				reizes = scan.nextInt();
 				}while(reizes<1);
-				pedejie = mestKaulinu(reizes);
+				
+				for(int i=0; i<reizes; i++){
+				pedejie.add(mestKaulinu());
+				}
 			break;
 			case 2:
-			System.out.println("Pēdeja metiena skaitļi");
-			for(int i=0; i<pedejie.size(); i++){
-				lielakais = pedejie.get(i);
+			System.out.println("Pēdeja metiena skaitļi ir ");
+			for(int i: pedejie){
+				System.out.print(i+" ");
 			}
 			break;
 			case 3:
@@ -45,8 +40,9 @@ public class Kaulins {
 						lielakais = pedejie.get(i);
 					}
 				}
+				System.out.println("Lielākais skaitlis pēdeja metienā ir "+lielakais);
 			}
-		}while(izvele!=3);
+		}while(izvele!=4);
 		scan.close();
 		}
 	}
